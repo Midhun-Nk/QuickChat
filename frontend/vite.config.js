@@ -6,4 +6,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react() ,   tailwindcss(),
 ],
+  base: "./",   // 👈 important for Render/Netlify/Vercel
+  build: {
+    outDir: "dist"
+  }
 })
